@@ -20,6 +20,8 @@
   searchButton.addEventListener('click', () => renderAllBooks(filterBooks(bookList)))
   sortButton.addEventListener('click', () => renderAllBooks(sortBooks(bookList)))
 
+  console.log(searchButton);
+
   const filterBooks = (books) => books.filter(book =>
   book.name.toLowerCase().includes(searchInput.value.toLowerCase()));
 
