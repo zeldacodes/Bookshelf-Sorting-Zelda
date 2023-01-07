@@ -1,0 +1,92 @@
+* {
+    box-sizing: content-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    font-family: courier;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-family: cursive;
+}
+
+h1 {
+    font-style: italic;
+    font-family: cursive;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bookshelf {
+    background-color: purple;
+    border-bottom: 10px solid pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+    scrollbar-color: pink purple;
+}
+
+main section {
+    margin: auto;
+}
+
+/* section {
+    margin-left: 0px;
+} */
+
+.ui {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#library {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    font-size: medium;
+    display: block;
+    font-family: Georgia;
+    margin: 0px;
+    padding: 8px;
+}
+
+li {
+    list-style: none;
+    display: block;
+    font-display:inherit;
+    border: 2px solid pink;
+    padding: 10px;
+    margin-left: 0px;
+    color: pink;
+}
+
+button {
+    border-radius: 5px;
+    background-color: purple;
+    color: pink;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    font-family: courier;
+    margin-top: 0px;
+    padding-top: 0px;
+}
