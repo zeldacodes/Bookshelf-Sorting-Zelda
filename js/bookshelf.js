@@ -22,21 +22,30 @@ class Bookshelf {
       `${this.title}, ${this.author}, ${this.language}, ${this.subject}`;
 
   const bookshelf = new Bookshelf(`${this.title}, ${this.author}, ${this.language}, ${this.subject}`);
-  }
-}
 
-const renderUserInput = () => {
+  const renderAllBooks = (books) => {
+    const elements = books.map(renderBook);
+    Bookshelf.replaceChildren(...elements);
+    }
+  }
+// }
+
+renderUserInput = () => {
   const searchInput = document.querySelector('.searchInput');
   const searchButton = document.querySelector('.searchButton');
   const sortButton = document.querySelector('.sortButton');
-  addBtn.textContent = "fav"
-  addBtn.addEventListener("click", () => {
-    const bookshelf = Bookshelf();
-  })
-};
 
-  // searchButton.addEventListener('click', () => renderAllBooks(filterBooks(catList)))
+  searchButton.addEventListener("click", () => renderAllBooks(filterBooks(Bookshelf)))
 
-  // sortButton.addEventListener('click', () => renderAllCats(sortCats(catList)))
-  
-  // const filterCats = (cats) => cats.filter(cat => cat.name.toLowerCase().includes(searchInput.value.toLowerCase()));
+  sortButton.addEventListener("click", () => renderAllBooks(sortBooks(Bookshelf)))
+
+  const sortBooks = (books) => {
+    return books.sort((a,z) => a.name < z.name ? -1 : 1); 
+  }
+
+  const filterBooks = (books) => books.filter(book => 
+    book.name.toLowerCase().includes(searchInput.value.toLowerCase()))
+  }
+
+}
+renderAllBooks(Bookshelf);
