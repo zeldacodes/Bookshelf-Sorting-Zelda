@@ -25,10 +25,16 @@ class Bookshelf {
   }
 }
 
+const renderUserInput = () => {
   const searchInput = document.querySelector('.searchInput');
   const searchButton = document.querySelector('.searchButton');
   const sortButton = document.querySelector('.sortButton');
-  
+  addBtn.textContent = "fav"
+  addBtn.addEventListener("click", () => {
+    const bookshelf = Bookshelf();
+  })
+};
+
   // searchButton.addEventListener('click', () => renderAllBooks(filterBooks(catList)))
 
   // sortButton.addEventListener('click', () => renderAllCats(sortCats(catList)))
