@@ -12,9 +12,15 @@ header {
     font-family: cursive;
 }
 
-h1 {
+/* h1 {
     font-style: italic;
     font-family: cursive;
+    color: purple;
+    margin: 0px;
+    padding-top: 10px;
+} */
+
+h1#MyTitle {
     color: purple;
 }
 
@@ -39,10 +45,6 @@ body {
 main section {
     margin: auto;
 }
-
-/* section {
-    margin-left: 0px;
-} */
 
 .ui {
     display: flex;

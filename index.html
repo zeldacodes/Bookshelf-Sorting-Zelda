@@ -9,19 +9,26 @@
 </head>
 <body>
     <header>
-        <h1>Zelda's Bookshelf</h1>
+        <h1 id="MyTitle">Zelda’s Bookshelf 2 (Sorting)</h1>
     </header>
     <main>
-        <section class="bookshelf">
-        </section>
-        <section class="books">
-            <ul class="library"></ul>
-        </section>
-        <section class="card">
-                <card class="container">
-                    <!-- <li></li> -->
-                </ul>
-        </section>
+      <section class="ui">
+        <input type="text" class="searchInput" placeholder="Name of the book" />
+        <button class="searchButton">Search</button>
+        <button class="sortButton">Sort</button>
+        <!-- <button class="favButton">Favorite?</button> -->
+        <!-- there should be a favorite button associated with each book the way there was a "-" associated with each book to individually delete books via the demo -->
+        <!-- <button class="updateFavButton">Update Favorite</button> -->
+      </section>
+      <section class="bookshelf">
+      </section>
+      <section class="books">
+          <ul class="library"></ul>
+      </section>
+      <section class="card">
+        <card class="container">
+          </ul>
+      </section>
     </main> 
 
     <!-- Gather the stuff needed to create the books -->
@@ -33,33 +40,3 @@
     <script src="js/index.js"></script>
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookshelf Sorting</title>
-  </head>
-  <body>
-    <header>
-      <h1>Bookshelf Sorting - Zelda</h1>
-    </header>
-    <section class="ui">
-      <input type="text" class="searchInput" placeholder="Book name" />
-      <button class="searchButton">Search</button>
-      <button class="sortButton">Sort</button>
-      <!-- <button class="favButton">Favorite?</button> -->
-      <!-- there should be a favorite button associated with each book the way there was a "-" associated with each book to individually delete books via the demo -->
-      <!-- <button class="updateFavButton">Update Favorite</button> -->
-    </section>
-    <main id="app"></main>
-    <div id="toggleDiv"></div>
-
-    <script src="js/book-data.js"></script>
-    <script src="js/book.js"></script>
-    <script src="js/bookshelf.js"></script>
-    <script src="js/index.js"></script>
-  </body>
-</html> -->
