@@ -23,5 +23,14 @@ class Bookshelf {
 
   const bookshelf = new Bookshelf(`${this.title}, ${this.author}, ${this.language}, ${this.subject}`);
   }
-  //add an event listener to make the button take action (add/get books)
 }
+
+  const searchInput = document.querySelector('.searchInput');
+  const searchButton = document.querySelector('.searchButton');
+  const sortButton = document.querySelector('.sortButton');
+  
+  // searchButton.addEventListener('click', () => renderAllBooks(filterBooks(catList)))
+
+  // sortButton.addEventListener('click', () => renderAllCats(sortCats(catList)))
+  
+  // const filterCats = (cats) => cats.filter(cat => cat.name.toLowerCase().includes(searchInput.value.toLowerCase()));

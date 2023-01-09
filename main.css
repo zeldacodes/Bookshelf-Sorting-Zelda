@@ -12,14 +12,6 @@ header {
     font-family: cursive;
 }
 
-/* h1 {
-    font-style: italic;
-    font-family: cursive;
-    color: purple;
-    margin: 0px;
-    padding-top: 10px;
-} */
-
 h1#MyTitle {
     color: purple;
 }
