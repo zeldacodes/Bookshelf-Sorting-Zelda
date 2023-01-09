@@ -6,7 +6,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: purple;
     font-family: courier;
     margin-top: 0px;
     padding-top: 0px;
@@ -16,6 +15,7 @@ header {
 h1 {
     font-style: italic;
     font-family: cursive;
+    color: purple;
 }
 
 body {

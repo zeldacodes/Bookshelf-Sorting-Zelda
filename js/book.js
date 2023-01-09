@@ -1,74 +1,32 @@
-// class Book {
-//   constructor(author, language, subject, title) {
-//     this.author = author;
-//     this.language = language;
-//     this.subject = subject;
-//     this.title = title;
-//   }
-//   getDetails() {
-//     return `${this.title}, ${this.author}, ${this.language}, ${this.subject}`;
-//   }
-//}
-  
-  const bookList = booksArray;
-  const favoritedBooks = [];
-
-  const searchInput = document.querySelector('.searchInput');
-  const searchButton = document.querySelector('.searchButton');
-  const sortButton = document.querySelector('.sortButton');
-
-  searchButton.addEventListener('click', () => renderAllBooks(filterBooks(bookList)))
-  sortButton.addEventListener('click', () => renderAllBooks(sortBooks(bookList)))
-
-  console.log(searchButton);
-
-  const filterBooks = (books) => books.filter(book =>
-  book.name.toLowerCase().includes(searchInput.value.toLowerCase()));
-
-  const sortBooks = (books) => {
-    console.log("Sorted Books")
-    return books.sort((a,z) => a.book < b.book ? -1 : 1);
+class Book {
+  constructor(title, author, language, subject){
+      this.title = title;
+      this.author = author;
+      this.language = language;
+      this.subject = subject;
+  }
+  getDetails() {
+      return `${this.title}, ${this.author}, ${this.language}, ${this.subject}`;
   }
 
-  const favorite = (book) => {
-    favoritedBooks.push(book);
-    console.log("I am a favorite book!")
-    renderAllBooks(bookList);
-  }
+  render() {
 
-  const renderBook = (book) => {
-    const { author, language, subject, title } = book;
-    const bookCard = document.createElement("section");
-    bookCard.className = "card";
-    const bookDetails = document.createElement("li");
-    bookDetails.innerText = `${this.author}, ${this.language}, ${this.subject}, ${this.title}`;
-    // more code needed here
+      const li = document.createElement("li");
+      const title = document.createElement("h1");
+      title.textContent = this.title;
 
-    const bookFavorited = document.createElement("p");
-    bookFavorited.innerText = `This book ${title} is a favorite!`
+      const author = document.createElement("h2");
+      author.textContent = this.author;
 
-    // Add a "favorite" button that indicates whether or not the book instance is a favorite & clicking the button toggles this property
-    const favBtn = document.createElement("button");
-    favBtn.innerText = "I'm a favorite!";
-    favBtn.addEventListener("click", () => favorite(book));
+      const language = document.createElement("h3");
+      language.textContent = this.language;
 
-    const updateFavCountButton = document.createElement("button");
-    updateFavCountButton.innerText = "Update Favorite Count";
-    updateFavCountButton.addEventListener(click, () => updateFavorite(book));
+      const subject = document.createElement("h3");
+      subject.textContent = this.subject;
 
-    const elementToAdd = (favoritedBooks.included(book)) ? bookFavorited : button;
-    bookCard.append(elementToAdd);
+      li.append(title, author, language, subject)
 
-    bookCard.append(title, author, subject, language)
-    
-    return bookCard;
-    }
-
-const renderAllBooks = (books) => {
-  const elements = books.map(renderBook);
-  bookshelfSection.replaceChildren(...elements);
+      // li.textContent = this.title;
+      return li;
+      }
 }
-
-renderAllBooks(bookList);
-
-
